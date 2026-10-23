@@ -4,7 +4,7 @@
   <name>lzh_test_pkg</name>
   <version>0.0.0</version>
   <description>个人学习用的测试包，验证 ROS 2 工作空间编译与运行链路是否正常</description>
-  <maintainer email="lzh@example.com">lzh</maintainer>
+  <maintainer email="dousica@users.noreply.github.com">lzh</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
