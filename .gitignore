@@ -1,0 +1,26 @@
+# ROS2 / colcon build products
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# C/C++ temporary/build files
+*.o
+*.so
+
+# IDE
+.vscode/
+.idea/
+
+# OS / temporary
+.DS_Store
+*~
+*.swp
+
+# Python virtual environments
+.venv/
+venv/
+env/
