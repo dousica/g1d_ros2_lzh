@@ -27,6 +27,14 @@ source ~/g1d_ros2_lzh/install/setup.bash   # 我的空间（只此一个）
 export ROS_DOMAIN_ID=42     # 我的频道
 ```
 
+**最省事的做法**：直接用现成脚本，一条命令搞定环境：
+
+```bash
+source ~/g1d_ros2_lzh/setup_env.sh
+```
+
+它会自动做三件事：设 `ROS_DOMAIN_ID=42` → source 系统 ROS → source 我的 overlay（顺序已固定，不会搞反）。
+
 | 项目 | ROS_DOMAIN_ID | 说明 |
 |---|---|---|
 | `g1d_ros2_lzh`（我的） | `42` | 学习、离线开发 |
@@ -100,6 +108,16 @@ source /opt/ros/humble/setup.bash   # 如果发现环境变量脏了，先跑这
 
 ## 六、我的 git 仓库
 
-- 本地仓库已 `git init`，分支 `main`
-- 远端：**暂不配置**。这是属于我自己的独立仓库，不与任何其他工作空间共用远端。
-- 提交信息用中文/英文随意，但格式建议：`feat: xxx` / `fix: xxx` / `docs: xxx`
+- 远端：**`https://github.com/dousica/g1d_ros2_lzh`**（public）
+- 提交身份：仓库级 `dousica` / `dousica@users.noreply.github.com`（隐私邮箱，不暴露真实邮箱）
+- 与师兄的 `JaminJin58/g1d_control` **完全隔离**：独立的 gh 配置目录 + 仓库级 credential helper
+- 提交信息格式：`feat: xxx` / `fix: xxx` / `docs: xxx`
+
+日常推送（自动使用 dousica 的 token，无需手动切换）：
+
+```bash
+cd ~/g1d_ros2_lzh
+git add .
+git commit -m "feat: xxx"
+git push
+```
